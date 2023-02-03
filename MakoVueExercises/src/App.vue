@@ -1,16 +1,15 @@
 <template>
-    <div>
-        {{ count }}
-        <p>Hello, World!</p>
-        <p>{{ text1 }}</p>
-        <p>{{ text2 }}</p>
-        <p>{{ text3 }}</p>
-    </div>
+
+    <p>
+    <a href="{{href}}"><img :src="attr" 
+    width="200" height="200" alt="david">
+    </a>
+    Давид джентельмен как ни крути на вид...
+    </p>
+
+    <a href={{href}}>{{text}}</a>
 
 
-    <div> {{ name }} </div>
-
-    <div>{{ surn }}</div>
 </template>
 
 
@@ -18,16 +17,14 @@
 export default {
     name: 'App',
 
-     data() {
-        return{
-            text1: 'Предложение номер 1',
-            text2: 'Предложение номер 2',
-            text3: 'Предложение номер 3',
-            count: 0,
-            name: 'Makosin',
-		    surn: 'Dzjaszchkowiczh',
-        }
-    }
+    data() {
+	return {
+		text: 'zamayproject',
+		href: './zamayproject.html',
+        attr: "./assets/david.jpg"
+
+	}
+}
 }
 </script>
 

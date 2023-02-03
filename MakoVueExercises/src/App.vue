@@ -1,24 +1,27 @@
 <template>
 
-<button @click="showdate">Показать текущую дату НАЖАТЬ</button>
-<button @mouseenter="showdate">Показать текущую дату НАВЕСТИ</button>
+
+	<button @click="show">Показать</button>
 
 </template>
 
 
 <script>
 export default {
-	data() {
-		
-	},
+    data() {
+	    return {
+		    number1: 100,
+		    number2: 211,
+	    }
+    },
 	methods: {
-		showdate: function() {
-            // Simply create a new Date object and pass it to alert()
-            alert(new Date());
+		show: function() {
+            alert(this.number1 + this.number2);
 
         }
 	}
 }
+
 </script>
 
 <style>

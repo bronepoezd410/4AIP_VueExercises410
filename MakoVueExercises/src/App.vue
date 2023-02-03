@@ -1,18 +1,22 @@
 <template>
 
-    <p>{{ object.a + object.b + object.c }}</p>
+	{{ showdata() }}
 
 </template>
 
 
 <script>
 export default {
-    name: 'App',
-    data() {
-	return {
-		object: {a: 10, b: 20, c: 30},
+	data() {
+		
+	},
+	methods: {
+		showdata: function() {
+            // Simply create a new Date object and pass it to alert()
+            alert(new Date());
+
+        }
 	}
-}
 }
 </script>
 

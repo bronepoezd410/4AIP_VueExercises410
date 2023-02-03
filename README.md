@@ -3,6 +3,8 @@
   <h3 align="center">My Vue Exercises</h3>
   
   ## About The Project
-  В данном "проекте" были рассмотрены практические задания по Vue. Задачи взяты с: https://www.code.mu//
+  В данном "проекте" я упражняюсь по практическим заданиям на Vue. Задачи взяты с: https://www.code.mu//
   
-<a href="https://imgflip.com/gif/79w34j"></a></p>
+<div id="header" align="center">
+  <img src="https://media.giphy.com/media/1zY5VTU1tsfcrOkoK3/giphy.gif" width="700"/>
+</div>

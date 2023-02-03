@@ -1,6 +1,7 @@
 <template>
 
-	{{ showdata() }}
+<button @click="showdate">Показать текущую дату НАЖАТЬ</button>
+<button @mouseenter="showdate">Показать текущую дату НАВЕСТИ</button>
 
 </template>
 
@@ -11,7 +12,7 @@ export default {
 		
 	},
 	methods: {
-		showdata: function() {
+		showdate: function() {
             // Simply create a new Date object and pass it to alert()
             alert(new Date());
 

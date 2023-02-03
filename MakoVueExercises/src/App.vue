@@ -1,12 +1,16 @@
 <template>
     <div>
-        Hello, World!
-        <!-- Количество: {{ count }} -->
-        <h1> Написать какой-нибудь текст с тегами</h1>
-        <b> Написать какой-нибудь текст с тегами</b>
-        <h2> Написать какой-нибудь текст с тегами</h2>
-        <b> </b>
+        {{ count }}
+        <p>Hello, World!</p>
+        <p>{{ text1 }}</p>
+        <p>{{ text2 }}</p>
+        <p>{{ text3 }}</p>
     </div>
+
+
+    <div> {{ name }} </div>
+
+    <div>{{ surn }}</div>
 </template>
 
 
@@ -16,12 +20,16 @@ export default {
 
      data() {
         return{
+            text1: 'Предложение номер 1',
+            text2: 'Предложение номер 2',
+            text3: 'Предложение номер 3',
             count: 0,
+            name: 'Makosin',
+		    surn: 'Dzjaszchkowiczh',
         }
     }
 }
 </script>
-
 
 <style>
 

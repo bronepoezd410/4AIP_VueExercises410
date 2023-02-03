@@ -1,14 +1,7 @@
 <template>
 
-    <p>
-    <a href="{{href}}"><img :src="attr" 
-    width="200" height="200" alt="david">
-    </a>
-    Давид джентельмен как ни крути на вид...
-    </p>
-
-    <a href={{href}}>{{text}}</a>
-
+<p>Число {{ num }} в квадрате равняется: {{ num*num }}</p>
+<p>Сумма {{num1}} {{num2}} {{num3}} равняется: {{ num1+num2+num3 }}</p>
 
 </template>
 
@@ -16,16 +9,16 @@
 <script>
 export default {
     name: 'App',
-
-    data() {
-	return {
-		text: 'zamayproject',
-		href: './zamayproject.html',
-        attr: "./assets/david.jpg"
+        data() {
+	    return {
+		num: 5,
+        num1: 1,
+		num2: 2,
+		num3: 3,
+	}
+    }
 
 	}
-}
-}
 </script>
 
 <style>

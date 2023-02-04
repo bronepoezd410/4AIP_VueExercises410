@@ -1,18 +1,10 @@
 <template>
 
-	<div>
-        <button @click="change">Изменить</button> 
-        <button @click="change1">Изменить 2</button> 
-        {{ text }}
-    </div>
+<!-- обработчик click будет вызван максимум 1 раз -->
+<!-- <a @click.once="doThis"></a> -->
+    <button><a @click.once="plusinteger">{{ integer }}</a></button>
 
-    <div>
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, cupiditate harum facere quia tempore voluptatibus, inventore ex impedit ipsa minima itaque. Quisquam ad tempora <strong>{{ text }}</strong> quia sit aut nobis nemo officiis?
-
-    </div>
-
-
+    <button><a @click.prevent href="http://github.com/bronepoezd410/">GitHub</a></button>
 
 
 
@@ -23,32 +15,31 @@ import { normalizeProps } from 'vue';
 
 export default {
     data() {
-	    return {
-		text: '',
-	    }
-    },
-    methods: {
-	change: function() {
-		this.text = 'Я БЕШЕННЫЙ, БЕГИТЕ';
-
-	},
-    change1: function(){
-        this.text = 'Я НЕНОРМАЛЬНЫЙ'
-    }
-}
-	
+	return {
+        integer: 13
 	}
+    
+},
+    methods: {
+        plusinteger: function(){
+            this.integer = this.integer * 2;
+
+        }
+    },
+    computed: {}
+}
 
 </script>
 
 <style>
 body{
-    background-color: rgb(125, 249, 249);
+    background-color: rgb(64, 5, 65);
 }
 div{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
     
 }
+
 
 </style>

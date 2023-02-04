@@ -1,13 +1,16 @@
 <template>
 
 	<div>
-	<p>Цена: {{ cost }}</p>
-	<p>Количество: {{ amount }}</p>
-	<p>Общая стоимость: {{ price }}</p>
+        <button @click="change">Изменить</button> 
+        <button @click="change1">Изменить 2</button> 
+        {{ text }}
     </div>
-    
-        <button @click="ccost"> Изменить цену </button>
 
+    <div>
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, cupiditate harum facere quia tempore voluptatibus, inventore ex impedit ipsa minima itaque. Quisquam ad tempora <strong>{{ text }}</strong> quia sit aut nobis nemo officiis?
+
+    </div>
 
 
 
@@ -20,25 +23,21 @@ import { normalizeProps } from 'vue';
 
 export default {
     data() {
-	return {
-		cost: 25,
-		amount: 200,
-	}
-    
-},
+	    return {
+		text: '',
+	    }
+    },
     methods: {
-        ccost: function(){
-            this.cost = this.cost*2;
-        }
-},
-    computed: {
-	    price: function() {
-		    return this.cost * this.amount;
-	    },
-}
+	change: function() {
+		this.text = 'Я БЕШЕННЫЙ, БЕГИТЕ';
 
-	
+	},
+    change1: function(){
+        this.text = 'Я НЕНОРМАЛЬНЫЙ'
+    }
 }
+	
+	}
 
 </script>
 

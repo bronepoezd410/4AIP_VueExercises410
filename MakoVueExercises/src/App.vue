@@ -3,10 +3,10 @@
 	<div>
 	<p>Цена: {{ cost }}</p>
 	<p>Количество: {{ amount }}</p>
-	<p>Общая стоимость: {{ price }}</p>
+	<p>Общая Стоимость: {{ price }}</p>
     </div>
     
-        <button @click="ccost"> Изменить цену </button>
+        <button @click="ccost"> Изменить Цену </button>
 
 
 

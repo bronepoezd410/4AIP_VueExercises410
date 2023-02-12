@@ -1,10 +1,9 @@
 
 <template>
-    <button @click="delogin"> {{ isAuth ? 'hide' : 'show' }}</button>
-		<p v-if="isAuth">+++</p>
+<ul>
+	<li v-for="elem in items">{{ elem**2 }}</li>
+</ul>
 
-    <p> v-if осуществляет фактическую отрисовку, при false уничтожает объект и появляется он сам только в моменте обращения результата условия в true, лучше всего использовать когда элементы будут нечасто переключены </p>
-    <p> v-show осуществляет отрисовку заранее и появляется/исчезает внешне но всегда создан, лучше всего использовать при частом взаимодействии с объектом. Директиву v-show нельзя использовать на элементе template и она не работает с v-else. </p>
 </template>
 
 <script>
@@ -12,15 +11,13 @@ import { normalizeProps } from 'vue';
 
 export default {
     data() {
-	return {
-        isAuth: true,
+        return {
+		items: [1, 2, 3, 4, 5],
 	}
 },
     methods: 
     {
-        delogin: function(){
-            this.isAuth = !this.isAuth
-        },
+
     computed: 
     {    }
 

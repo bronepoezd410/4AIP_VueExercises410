@@ -1,16 +1,15 @@
+
 <template>
+	<button @click="toggle"> {{ visible ? 'hide' : 'show' }} </button>
+    <p v-if="visible">text</p>
+    <br>
 
+	<button @click="toggle1"> {{ visible1 ? 'hide' : 'show' }} </button>
+    <p v-if="visible1">text</p>
+    <br>
 
-	<button @click="toggle">toggle</button>
-	<p v-if="visible">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel assumenda minus eveniet quam laudantium veritatis dignissimos atque, quasi tenetur quae.</p>
-<br>
-    <button @click="toggle1">toggle</button>
-    <p v-if="visible1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel assumenda minus eveniet quam laudantium veritatis dignissimos atque, quasi tenetur quae.</p>
-<br>
-    <button @click="toggle2">toggle</button>
-    <p v-if="visible2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel assumenda minus eveniet quam laudantium veritatis dignissimos atque, quasi tenetur quae.</p>
-
-
+	<button @click="toggle2"> {{ visible2 ? 'hide' : 'show' }} </button>
+    <p v-if="visible2">text</p>
 </template>
 
 <script>

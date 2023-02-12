@@ -1,15 +1,9 @@
 
 <template>
-	<button @click="toggle"> {{ visible ? 'hide' : 'show' }} </button>
-    <p v-if="visible">text</p>
-    <br>
-
-	<button @click="toggle1"> {{ visible1 ? 'hide' : 'show' }} </button>
-    <p v-if="visible1">text</p>
-    <br>
-
-	<button @click="toggle2"> {{ visible2 ? 'hide' : 'show' }} </button>
-    <p v-if="visible2">text</p>
+    <p v-if="isAdmin">+++</p>
+    <p v-else>---</p>
+    
+	<button @click="allo"> {{ isAdmin ? 'hide' : 'show' }} </button>
 </template>
 
 <script>
@@ -18,27 +12,17 @@ import { normalizeProps } from 'vue';
 export default {
     data() {
 	return {
-		visible: false,
-		visible1: false,
-		visible2: false,
+		isAdmin: true,
 	}
-    
 },
     methods: 
     {
-        toggle: function() {
-	    this.visible = !this.visible;
-    },
-        toggle1: function() {
-	    this.visible1 = !this.visible1;
-    },
-        toggle2: function() {
-	    this.visible2 = !this.visible2;
+        allo: function() {
+        this.isAdmin = !this.isAdmin;
+        
     },
     computed: 
-    {
-
-    }
+    {    }
 
 
     }

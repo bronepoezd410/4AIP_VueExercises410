@@ -1,8 +1,8 @@
 
 <template>
     <ul>
-	<li v-for="(elem, key) in arr">
-		 {{ key }} {{ elem }}
+	<li v-for="(elem1, key, index) in obj">
+		 {{ key }} - {{ elem1 }} - {{ index+1 }}
     </li>
     </ul>
 </template>
@@ -13,7 +13,7 @@ import { normalizeProps } from 'vue';
 export default {
     data() {
         return {
-        arr: ['x', 'y', 'z'],
+            obj: {user1: '100$', user2: '200$', user3: '300$'},
 	}
 },
     methods: 

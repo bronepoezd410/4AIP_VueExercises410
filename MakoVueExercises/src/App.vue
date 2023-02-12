@@ -1,8 +1,11 @@
 
 <template>
-	<p v-if="age < 18">Подросток</p>
-	<p v-else-if="age < 26">Молодой человек</p>
-	<p v-else>Мужчина</p>
+    <button @click="delogin"> {{ isAuth ? 'hide' : 'show' }}</button>
+	<div v-if="isAuth">
+		<p>+++</p>
+		<p>+++</p>
+		<p>+++</p>
+	</div>
 </template>
 
 <script>
@@ -11,11 +14,14 @@ import { normalizeProps } from 'vue';
 export default {
     data() {
 	return {
-        age: 25,
+        isAuth: true,
 	}
 },
     methods: 
     {
+        delogin: function(){
+            this.isAuth = !this.isAuth
+        },
     computed: 
     {    }
 

@@ -1,9 +1,12 @@
 
 <template>
-    <p v-if="isAdmin">+++</p>
-    <p v-else>---</p>
-    
-	<button @click="allo"> {{ isAdmin ? 'hide' : 'show' }} </button>
+	<p v-if="day === 1">Понедельник</p>
+	<p v-if="day === 2">Вторник</p>
+	<p v-if="day === 3">Среда</p>
+	<p v-if="day === 4">Четверг</p>
+	<p v-if="day === 5">Пятница</p>
+	<p v-if="day === 6">Суббота</p>
+	<p v-if="day === 7">Воскресенье</p>
 </template>
 
 <script>
@@ -12,15 +15,11 @@ import { normalizeProps } from 'vue';
 export default {
     data() {
 	return {
-		isAdmin: true,
+		day: 4,
 	}
 },
     methods: 
     {
-        allo: function() {
-        this.isAdmin = !this.isAdmin;
-        
-    },
     computed: 
     {    }
 

@@ -1,9 +1,10 @@
 
 <template>
-<ul>
-	<li v-for="elem in items">{{ elem**2 }}</li>
-</ul>
-
+    <ul>
+	<li v-for="(elem, key) in arr">
+		 {{ key }} {{ elem }}
+    </li>
+    </ul>
 </template>
 
 <script>
@@ -12,7 +13,7 @@ import { normalizeProps } from 'vue';
 export default {
     data() {
         return {
-		items: [1, 2, 3, 4, 5],
+        arr: ['x', 'y', 'z'],
 	}
 },
     methods: 

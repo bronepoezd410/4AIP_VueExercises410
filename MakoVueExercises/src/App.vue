@@ -1,10 +1,9 @@
 <template>
-
-<!-- обработчик click будет вызван максимум 1 раз -->
-<!-- <a @click.once="doThis"></a> -->
-<!-- <a v-if="visible" href="http://github.com/bronepoezd410/">GitHub</a> -->
-    <p v-if = "!hidden">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, sit. Veritatis quidem illo, aspernatur distinctio nisi quaerat ab dolor eius incidunt recusandae consequuntur, officia hic, dolores sunt nam similique iure deserunt quis rerum ratione. Culpa maiores dolorum tenetur natus earum.</p>
-
+	<p v-if="visible">text</p>
+    <br>
+    <button @click="hide">hide</button>
+    <button @click="show">show</button>
+    <button @click="reversal">show/hide</button>
 
 </template>
 
@@ -14,17 +13,33 @@ import { normalizeProps } from 'vue';
 export default {
     data() {
 	return {
-        hidden: false
+		visible: false,
 	}
     
 },
-    methods: {},
-    computed: {}
+    methods: 
+    {
+        hide: function() {
+		//this.visible = !this.visible;
+		this.visible = false;
+	    },
+        show: function() {
+		this.visible = true;
+	    },
+        reversal: function() {
+		this.visible = !this.visible;
+        },
+    computed: {
+    }
+    }
 }
 
 </script>
 
 <style>
+
+
+
 body{
     background-color: rgb(161, 255, 162);
 }

@@ -1,9 +1,15 @@
 <template>
-	<p v-if="visible">text</p>
-    <br>
-    <button @click="hide">hide</button>
-    <button @click="show">show</button>
-    <button @click="reversal">show/hide</button>
+
+
+	<button @click="toggle">toggle</button>
+	<p v-if="visible">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel assumenda minus eveniet quam laudantium veritatis dignissimos atque, quasi tenetur quae.</p>
+<br>
+    <button @click="toggle1">toggle</button>
+    <p v-if="visible1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel assumenda minus eveniet quam laudantium veritatis dignissimos atque, quasi tenetur quae.</p>
+<br>
+    <button @click="toggle2">toggle</button>
+    <p v-if="visible2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel assumenda minus eveniet quam laudantium veritatis dignissimos atque, quasi tenetur quae.</p>
+
 
 </template>
 
@@ -14,23 +20,28 @@ export default {
     data() {
 	return {
 		visible: false,
+		visible1: false,
+		visible2: false,
 	}
     
 },
     methods: 
     {
-        hide: function() {
-		//this.visible = !this.visible;
-		this.visible = false;
-	    },
-        show: function() {
-		this.visible = true;
-	    },
-        reversal: function() {
-		this.visible = !this.visible;
-        },
-    computed: {
+        toggle: function() {
+	    this.visible = !this.visible;
+    },
+        toggle1: function() {
+	    this.visible1 = !this.visible1;
+    },
+        toggle2: function() {
+	    this.visible2 = !this.visible2;
+    },
+    computed: 
+    {
+
     }
+
+
     }
 }
 

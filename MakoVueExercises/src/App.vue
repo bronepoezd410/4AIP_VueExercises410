@@ -1,14 +1,27 @@
 
 <template>
+	<div>
     <ul>
-	<div v-for="elem in items">
-        <li>
-        {{ elem }}
+        <li v-for = "jopa in hrefs">
+            <a href= {{jopa.href}}> {{jopa.text}} </a>
         </li>
-        <li class="divider">divider</li>
-    </div>
     </ul>
+    </div>
+
+    <div>
+        <table>
+            <tr v-for="things in products">
+                <td> {{ things.name }} </td>
+                <td> {{ things.price }} </td>
+                <td> {{ things.quantity }} </td>
+            </tr>
+        </table>
+    </div>
+
 </template>
+
+
+
 
 <script>
 import { normalizeProps } from 'vue';
@@ -16,7 +29,29 @@ import { normalizeProps } from 'vue';
 export default {
     data() {
         return {
-		items: [1, 2, 3],
+            hrefs: [
+			{href: '1.html', text: 'text1'},
+			{href: '2.html', text: 'text2'},
+			{href: '3.html', text: 'text3'},
+		],
+        products: [
+			{
+				name: 'product1',
+				price: 100,
+				quantity: 5
+			},
+			{
+				name: 'product2',
+				price: 200,
+				quantity: 4
+			},
+			{
+				name: 'product3',
+				price: 300,
+				quantity: 3
+			},
+		],
+
 	}
 },
     methods: 
@@ -44,5 +79,10 @@ div{
     
 }
 
+
+table, th, td {
+  border: 3px solid black;
+  border-collapse: collapse;
+}
 
 </style>

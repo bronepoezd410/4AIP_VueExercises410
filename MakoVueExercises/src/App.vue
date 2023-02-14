@@ -1,11 +1,16 @@
 
 <template>
     <div>
-    <template v-for="num in items">
-	    <p v-if = "num> 0">
-		    {{ num }}
-	    </p>
-    </template>
+        <ul>
+            <li v-for="things in products" :key="things.id">
+                {{ things.name }}
+
+
+
+            </li>
+
+
+        </ul>
 
     </div>
 
@@ -20,7 +25,20 @@ import { normalizeProps } from 'vue';
 export default {
     data() {
         return {
-		items: [1, -2, 3, -4, 5],
+            products: [
+			{
+				id: 1,
+				name: 'product1',
+			},
+			{
+				id: 2,
+				name: 'product2',
+			},
+			{
+				id: 3,
+				name: 'product3',
+			},
+		]
 	}
 },
     methods: 

@@ -1,19 +1,23 @@
 
 <template>
-    <div>
-        <ul>
-            <li v-for="things in products" :key="things.id">
-                {{ things.name }}
+    <button @click="add">добавить </button>   
+    <br>
+    <button @click="removeb">убрать первый</button> 
+    <br>    
+    <button @click="removef">убрать последний</button> 
+    <br>    
+    <button @click="removel">убрать предпоследний</button> 
+    <br>    
+    <button @click="sort1">отсортировать</button> 
+    <br>    
+    <button @click="reverse1">перевернуть</button> 
+    <br>    
 
-
-
-            </li>
-
-
-        </ul>
-
-    </div>
-
+    <ul>
+        <li v-for="elem in arr">
+            <p> {{ elem }}</p>
+        </li>
+    </ul>
 </template>
 
 
@@ -25,27 +29,33 @@ import { normalizeProps } from 'vue';
 export default {
     data() {
         return {
-            products: [
-			{
-				id: 1,
-				name: 'product1',
-			},
-			{
-				id: 2,
-				name: 'product2',
-			},
-			{
-				id: 3,
-				name: 'product3',
-			},
-		]
+		arr: ['1', '2', '3'],
 	}
 },
     methods: 
     {
+        add: function() {
+		this.arr.push(this.arr.length); // добавить элемент
+        },
+        removeb: function(){
+        this.arr.shift(0) // убрать первый
+        },
+        removef: function(){
+        this.arr.splice(this.arr.length-1) //убрать последний
+        },
+        removel: function(){
+        this.arr.splice(this.arr.length-2, 1) //убрать предпоследний
+        },
+        sort1: function(){
+        this.arr.sort() //отсортировать
+        },
+        reverse1: function(){
+        this.arr.reverse() //отсортировать
+        },
 
     computed: 
-    {    }
+    {    
+    }
 
 
     }

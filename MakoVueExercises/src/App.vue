@@ -72,7 +72,7 @@ body{
 }
 div{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 25px;
+    font-size: 40px;
     
 }
 
@@ -81,5 +81,12 @@ table, th, td {
   border: 3px solid black;
   border-collapse: collapse;
 }
+
+
+button {
+    font-size: 30px;
+    border: 4px solid orange;
+    margin: 5px;
+	}
 
 </style>

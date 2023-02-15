@@ -1,21 +1,35 @@
 
 <template>
-    <button @click="add">добавить </button>   
+
+
+<div class="header" style="background-color: #334d5c; color: #fff; padding: 20px;">
+    <h1 style="color: #fff; font-size: 32px;">David's Laboratory</h1>
+    <nav style="background-color: #1e1e1e; color: #fff; padding: 10px;">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+
+
+    <button @click="add" class="button button-primary">добавить </button>   
     <br>
-    <button @click="removeb">убрать первый</button> 
+    <button @click="removeb" class="button button-secondary">убрать первый</button> 
     <br>    
-    <button @click="removef">убрать последний</button> 
+    <button @click="removef" class="button button-secondary">убрать последний</button> 
     <br>    
-    <button @click="removel">убрать предпоследний</button> 
+    <button @click="removel" class="button button-secondary">убрать предпоследний</button> 
     <br>    
-    <button @click="sort1">отсортировать</button> 
+    <button @click="sort1" class="button button-secondary">отсортировать</button> 
     <br>    
-    <button @click="reverse1">перевернуть</button> 
+    <button @click="reverse1" class="button button-secondary">перевернуть</button> 
     <br>    
+
 
     <ul>
         <li v-for="elem in arr">
-            <p> {{ elem }}</p>
+            <a> {{ elem }}</a>
         </li>
     </ul>
 </template>
@@ -65,28 +79,8 @@ export default {
 
 <style>
 
+@import url(./style.css);
 
 
-body{
-    background-color: rgb(161, 255, 162);
-}
-div{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 40px;
-    
-}
-
-
-table, th, td {
-  border: 3px solid black;
-  border-collapse: collapse;
-}
-
-
-button {
-    font-size: 30px;
-    border: 4px solid orange;
-    margin: 5px;
-	}
 
 </style>

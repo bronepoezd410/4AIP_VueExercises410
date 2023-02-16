@@ -1,18 +1,19 @@
 
 <template>
-    <button @click="add">добавить </button>   
-    <br>
-    <button @click="removeb">убрать первый</button> 
+    <div class="button_things">
+        <button @click="add" class="primary">добавить </button>   
+        <br>
+        <button @click="removeb" class="primary">убрать первый</button> 
+        <br>    
+        <button @click="removef" class="primary">убрать последний</button> 
+        <br>    
+        <button @click="removel" class="primary">убрать предпоследний</button> 
+        <br>    
+        <button @click="sort1" class="primary">отсортировать</button> 
+        <br>    
+        <button @click="reverse1" class="primary">перевернуть</button> 
     <br>    
-    <button @click="removef">убрать последний</button> 
-    <br>    
-    <button @click="removel">убрать предпоследний</button> 
-    <br>    
-    <button @click="sort1">отсортировать</button> 
-    <br>    
-    <button @click="reverse1">перевернуть</button> 
-    <br>    
-
+    </div>
     <ul>
         <li v-for="elem in arr">
             <p> {{ elem }}</p>
@@ -66,27 +67,6 @@ export default {
 <style>
 
 
-
-body{
-    background-color: rgb(161, 255, 162);
-}
-div{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 40px;
-    
-}
-
-
-table, th, td {
-  border: 3px solid black;
-  border-collapse: collapse;
-}
-
-
-button {
-    font-size: 30px;
-    border: 4px solid orange;
-    margin: 5px;
-	}
-
+@import url('./style.css');
+@import url(./baton_styles.css);
 </style>

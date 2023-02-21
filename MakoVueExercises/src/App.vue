@@ -1,6 +1,9 @@
 
 <template>
-	<p :class="obj">aLLO</p>
+    <div class="withMargin"> 
+        <button @click="hide"> {{ obj.hidden ? 'Показать' : 'Скрыть' }} </button>
+        <p :class="obj">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptas suscipit soluta obcaecati doloremque nam eos culpa ullam exercitationem.</p>
+    </div>
 </template>
 
 
@@ -13,13 +16,15 @@ export default {
     data() {
         return {
             obj: {
-			red_color: true,
-			font_big_size:  true,
+			hidden: false,
 		},
 	}
 },
     methods: 
     {
+        hide: function(){
+            this.obj.hidden = !this.obj.hidden;
+        },
 
 
     computed: 

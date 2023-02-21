@@ -1,7 +1,8 @@
-.red_color {
-    color: red;
+p.hidden {
+	display: none;
 }
 
-.font_big_size {
-    font-size: 40px;
+
+.withMargin {
+    margin-left: 20px;
 }

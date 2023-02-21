@@ -1,6 +1,7 @@
 .withMargin {
     margin-left: 20px;
     margin-bottom: 50px;
+    margin-right: 20px; 
 }
 p {
 font-size: 30px;

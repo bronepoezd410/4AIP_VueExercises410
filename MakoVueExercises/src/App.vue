@@ -1,8 +1,7 @@
 
 <template>
     <div class="withMargin"> 
-        <button @click="hide"> {{ obj.hidden ? 'Показать' : 'Скрыть' }} </button>
-        <p :class="obj">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptas suscipit soluta obcaecati doloremque nam eos culpa ullam exercitationem.</p>
+        <p :class="{active: false, valid: true}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptas suscipit soluta obcaecati doloremque nam eos culpa ullam exercitationem.</p>
     </div>
 </template>
 

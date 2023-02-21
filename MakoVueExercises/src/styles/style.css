@@ -1,6 +1,11 @@
-p.hidden {
+.active {
 	display: none;
 }
+.valid {
+    color: red;
+}
+
+
 
 
 .withMargin {

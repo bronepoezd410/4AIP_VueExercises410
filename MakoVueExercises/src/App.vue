@@ -4,19 +4,19 @@
 
 
 
+        <input type="text" v-model="message" class="my-input">
+        
+        <p :style="{textTransform:'uppercase'}">{{ message }}</p>    
+
+    </div>
 
 
+    <div class="withMargin">
+                
+        <input type="number" v-model="number" class="my-input">
 
+        <p :style="{textTransform:'uppercase'}">{{ number**2 }}</p>    
 
-
-
-
-
-
-
-        <p :style="{color: 'green', backgroundColor: 'yellow'}"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, possimus! </p>
-
-        <p :style="{fontStyle:'italic'}"> <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, beatae odit repellat eligendi fugit excepturi est? Sequi dicta voluptatum blanditiis molestias distinctio fugiat, repellat maiores facere, et quos doloremque reiciendis.</b> </p>
     </div>
 </template>
 
@@ -29,19 +29,12 @@ import { normalizeProps } from 'vue';
 export default {
     data() {
         return {
-		active: false,
-		valid: true,
+        message: 'азазазаз',
+        number: 0
 	}
 },
     methods: 
-    {
-
-    computed: 
-    {    
-    }
-
-
-    }
+    {}
 }
 
 </script>

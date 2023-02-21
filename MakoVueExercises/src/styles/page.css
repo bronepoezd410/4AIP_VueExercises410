@@ -130,3 +130,18 @@
     color: #ffffff; /* Set the color of the text */
   }
 
+  .my-input {
+    border: none;
+    border-radius: 3px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: whitesmoke;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .my-input:focus {
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }

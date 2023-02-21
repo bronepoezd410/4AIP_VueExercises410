@@ -1,7 +1,22 @@
 
 <template>
     <div class="withMargin"> 
-        <p :class="{isActive: active, hasError: valid}"> text </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p :style="{color: 'green', backgroundColor: 'yellow'}"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum, possimus! </p>
+
+        <p :style="{fontStyle:'italic'}"> <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, beatae odit repellat eligendi fugit excepturi est? Sequi dicta voluptatum blanditiis molestias distinctio fugiat, repellat maiores facere, et quos doloremque reiciendis.</b> </p>
     </div>
 </template>
 

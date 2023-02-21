@@ -1,7 +1,7 @@
-.active {
+.isActive {
 	display: none;
 }
-.valid {
+.hasError {
     color: red;
 }
 

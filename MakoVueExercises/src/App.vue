@@ -1,7 +1,7 @@
 
 <template>
     <div class="withMargin"> 
-        <p :class="{active: false, valid: true}">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptas suscipit soluta obcaecati doloremque nam eos culpa ullam exercitationem.</p>
+        <p :class="{isActive: active, hasError: valid}"> text </p>
     </div>
 </template>
 
@@ -14,17 +14,12 @@ import { normalizeProps } from 'vue';
 export default {
     data() {
         return {
-            obj: {
-			hidden: false,
-		},
+		active: false,
+		valid: true,
 	}
 },
     methods: 
     {
-        hide: function(){
-            this.obj.hidden = !this.obj.hidden;
-        },
-
 
     computed: 
     {    

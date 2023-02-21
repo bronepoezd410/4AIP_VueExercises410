@@ -1,7 +1,6 @@
 
 <template>
-    <p class="cssClasses"> cssClasses </p>
-
+	<p :class="obj">aLLO</p>
 </template>
 
 
@@ -13,6 +12,10 @@ import { normalizeProps } from 'vue';
 export default {
     data() {
         return {
+            obj: {
+			red_color: true,
+			font_big_size:  true,
+		},
 	}
 },
     methods: 
@@ -32,6 +35,7 @@ export default {
 <style>
 
 
-@import url('./style.css');
-@import url(./baton_styles.css);
+@import url('./styles/baton_styles.css');
+@import url('./styles/page.css');
+@import url('./styles/style.css');
 </style>

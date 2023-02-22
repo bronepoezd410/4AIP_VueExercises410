@@ -1,15 +1,46 @@
 
 <template>
     <div class="withMargin"> 
-    <p>Какие языки вы знаете?</p>
-    <input type="checkbox" v-model="arr" value="russian"> Русский
-	<input type="checkbox" v-model="arr" value="english"> Английский
-	<input type="checkbox" v-model="arr" value="french"> Французский
+    <p>
+        Какой язык для вас родной?
+    </p>
+    <input name="radio" type="radio" v-model="choice" value="Русский"> Русский
+	<input name="radio" type="radio" v-model="choice" value="Немецкий"> Немецкий
+	<input name="radio" type="radio" v-model="choice" value="Английский"> Английский
+    <br>
 
-    <ul>
-        <li v-for="items in arr"> {{ items }} </li>
+    you choosed: {{ choice }}
 
-    </ul>
+    <p v-if="choice == 'Русский'">
+        Россия — священная наша держава, 
+        Россия — любимая наша страна.
+        Могучая воля, великая слава —
+        Твоё достоянье на все времена!
+        Славься, Отечество наше свободное,
+        Братских народов союз вековой,
+        Предками данная мудрость народная!
+        Славься, страна! Мы гордимся тобой!</p>
+    <p v-if="choice == 'Немецкий'">
+        Einigkeit und Recht und Freiheit
+        für das deutsche Vaterland!
+        Danach lasst uns alle streben
+        brüderlich mit Herz und Hand!
+        Einigkeit und Recht und Freiheit
+        sind des Glückes Unterpfand!
+        Blüh im Glanze dieses Glückes,
+        blühe, deutsches Vaterland!
+        Blüh im Glanze dieses Glückes,
+        blühe, deutsches Vaterland!</p>
+    <p v-if="choice == 'Английский'">
+        God save our gracious King (Queen)!
+        Long live our noble King (Queen)!
+        God save the King (Queen)!
+        Send him (her) victorious,
+        Happy and glorious,
+        Long to reign over us:
+        God save the King (Queen).</p>
+
+
 
     </div>
 
@@ -22,8 +53,8 @@
 export default {
     data() {
         return {
-            arr: [],
-	}
+            choice: '',
+        	}
 },
     methods: 
     {

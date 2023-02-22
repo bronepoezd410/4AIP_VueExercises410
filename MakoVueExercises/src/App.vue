@@ -1,12 +1,8 @@
 
 <template>
     <div class="withMargin"> 
-        <textarea v-model="input"></textarea>
-        <button @click="submit">Submit</button>
-    <ul>
-      <li v-for="word in words" :key="word">{{ word }}</li>
-      <!-- не помню для чего конкретно служит :key -->
-    </ul>
+        <input type="checkbox" v-model="checked">
+	    <p v-if="checked">aloha</p>
     </div>
 
 </template>
@@ -17,16 +13,12 @@
 export default {
     data() {
         return {
-        input: '',
-        words: [],
+		checked: true,
 	}
 },
     methods: 
     {
-        submit() {
-      // Split the input into an array of words and update the words data property
-      this.words = this.input.split(' ');
-    },
+
     }
 }
 

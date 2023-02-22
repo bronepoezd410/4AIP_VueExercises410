@@ -1,9 +1,18 @@
 
 <template>
     <div class="withMargin"> 
-        <input type="checkbox" v-model="checked">
-	    <p v-if="checked">aloha</p>
+    <p>Какие языки вы знаете?</p>
+    <input type="checkbox" v-model="arr" value="russian"> Русский
+	<input type="checkbox" v-model="arr" value="english"> Английский
+	<input type="checkbox" v-model="arr" value="french"> Французский
+
+    <ul>
+        <li v-for="items in arr"> {{ items }} </li>
+
+    </ul>
+
     </div>
+
 
 </template>
 
@@ -13,7 +22,7 @@
 export default {
     data() {
         return {
-		checked: true,
+            arr: [],
 	}
 },
     methods: 

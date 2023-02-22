@@ -34,7 +34,7 @@
     <p v-if="choice == 'Английский'">
         God save our gracious King (Queen)!
         Long live our noble King (Queen)!
-        God save the King (Queen)!
+        God save the King (Queen)!s
         Send him (her) victorious,
         Happy and glorious,
         Long to reign over us:

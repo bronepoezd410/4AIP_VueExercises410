@@ -146,3 +146,22 @@
     outline: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+
+
+  textarea {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #444;
+    padding: 10px;
+    border: 2px solid #d33;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(221, 51, 51, 0.5);
+    resize: vertical;
+  }
+  
+  textarea:focus {
+    outline: none;
+    border-color: #ff6961;
+    box-shadow: 0 0 5px rgba(255, 105, 97, 0.5);
+  }

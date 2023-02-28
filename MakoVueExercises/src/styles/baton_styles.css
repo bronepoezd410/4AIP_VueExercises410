@@ -8,6 +8,8 @@ button {
     font-weight: bold;
     transition: background-color 0.3s ease;
     margin: 5px;
+    background-color:black;
+    color: white;
   }
   
   button.primary {

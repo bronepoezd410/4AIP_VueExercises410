@@ -1,33 +1,32 @@
-
 <template>
-    <div class="withMargin"> 
-        <div>
+
+<div>
     <table>
       <thead>
         <tr>
           <th>ID</th>
-          <th>Name</th>
-          <th>Salary</th>
-          <th>Age</th>
-          <th>Actions</th>
+          <th>Name</th> 
+          <th>Surname</th> 
         </tr>
       </thead>
       <tbody>
         <tr v-for="user in users" :key="user.id">
+        <template v-if="!user.isEdit">
           <td>{{ user.id }}</td>
           <td>{{ user.name }}</td>
-          <td>{{ user.salary }}</td>
-          <td>{{ user.age }}</td>
-          <td><button @click="removeUser(user.id)">Delete</button></td>
+          <td>{{ user.surn }}</td>
+          <button @click="edit(user)"> edit </button>
+        </template>
+        <template v-else>
+                <td>{{ user.id }}</td>
+				<td> <input v-model="user.name"> </td>
+				<td>  <input v-model="user.surn"> </td>
+                <td>  <button @click="save(user)">save</button></td>
+			</template>
         </tr>
       </tbody>
     </table>
   </div>
-
-
-        
-    </div>
-
 
 
 </template>
@@ -41,34 +40,33 @@ export default {
 		users: [
 			{
 				id: 1,
-				name: 'Данил Ромашкан',
-				salary: 100,
-				age: 30,
-                isEdit: false,
+				name: 'name1',
+				surn: 'surn1',
+				isEdit: false,
 			},
 			{
 				id: 2,
-				name: 'Давид Авагян',
-				salary: 200,
-				age: 40,
-                isEdit: false,
+				name: 'name2',
+				surn: 'surn2',
+				isEdit: false,
 			},
 			{
 				id: 3,
-				name: 'Шагин Виталий',
-				salary: 300,
-				age: 50,
-                isEdit: false,
+				name: 'name3',
+				surn: 'surn3',
+				isEdit: false,
 			},
-		],
+		]
 	}
 },
     methods: 
     {
-    removeUser(id) {
-    const index = this.users.findIndex(user => user.id === id)
-    this.users.splice(index, 1)
-    },
+        edit(user) {
+		user.isEdit = true;
+	},
+	    save(user) {
+		user.isEdit = false;
+	},
     }
 
 }

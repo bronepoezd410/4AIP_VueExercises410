@@ -1,17 +1,17 @@
 
 <template>
 	<template v-if="!isEdit">
-	  <div class="block">
+	  <div>
 		<h1>{{ name }}</h1>
 		<h1>{{ surn }}</h1>
-		<button class="btn" @click="edit">edit</button>
+		<button @click="edit">edit</button>
 	  </div>
 	</template>
 	<template v-else>
 	  <div class="block">
 		<input class="block_input" v-model="newName">
 		<input class="block_input" v-model="newSurn">
-		<button class="btn" @click="save">save</button>
+		<button @click="save">save</button>
 	  </div>
 	</template>
   </template>

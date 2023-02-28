@@ -1,34 +1,20 @@
+
+
 <template>
-
-    <div class="withMargin">
-        <p>промежуточная ветвь! </p>
-    </div>
-
-
-    <User/>
-
-
+<Rabotnik name="Давид" surn="Авагян" age="20"/>
 </template>
 
+
+
+
+
 <script>
-import User from './components/User.vue'
-	
-
+import Rabotnik from './components/Employee.vue'
 export default {
-    data() {
-	return {
-        components: {
-			User
-		}
-	}
-},
-    methods: 
-    {
-    }
-
+  components: {
+    Rabotnik
+  }
 }
-
-
 </script>
 
 <style>

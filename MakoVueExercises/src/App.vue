@@ -2,19 +2,24 @@
 
     <div class="withMargin">
         <p>промежуточная ветвь! </p>
-
     </div>
+
+
+    <User/>
 
 
 </template>
 
 <script>
-import { normalizeProps } from 'vue';
+import User from './components/User.vue'
+	
 
 export default {
     data() {
 	return {
-		
+        components: {
+			User
+		}
 	}
 },
     methods: 

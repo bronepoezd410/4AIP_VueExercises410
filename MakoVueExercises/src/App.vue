@@ -1,25 +1,34 @@
 
 <template>
     <div class="withMargin"> 
-	<input v-model="newItem">
-	<button @click="addItem" >add to ending</button>
-	<button @click="addItemToBegin" >add to beginning</button>
+        <div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Salary</th>
+          <th>Age</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="user in users" :key="user.id">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.salary }}</td>
+          <td>{{ user.age }}</td>
+          <td><button @click="removeUser(user.id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-    <ul>
-		<li v-for="(item, index) in items" :key="index">
-			{{ item }}
-		</li>
-	</ul>
+
+        
     </div>
 
 
-    <div class="withMargin">
-        <ul>
-        <li v-for="(item1, index) in myList" :key="index" @click="removeItem(index)">
-            {{ item1 }}
-        </li>
-        </ul>
-    </div>
 
 </template>
 
@@ -27,24 +36,39 @@
 import { normalizeProps } from 'vue';
 
 export default {
-  data() {
-    return {
-        newItem: '',
-		items: ['a', 'b', 'c', 'd', 'e'],
-        myList: ['item1', 'item2', 'item3']
-
-    }
-  },
+    data() {
+	return {
+		users: [
+			{
+				id: 1,
+				name: 'Данил Ромашкан',
+				salary: 100,
+				age: 30,
+                isEdit: false,
+			},
+			{
+				id: 2,
+				name: 'Давид Авагян',
+				salary: 200,
+				age: 40,
+                isEdit: false,
+			},
+			{
+				id: 3,
+				name: 'Шагин Виталий',
+				salary: 300,
+				age: 50,
+                isEdit: false,
+			},
+		],
+	}
+},
     methods: 
     {
-	addItem: function() {
-		this.items.push(this.newItem);
-	},
-	addItemToBegin: function() {
-		this.items.unshift(this.newItem);}
+    removeUser(id) {
+    const index = this.users.findIndex(user => user.id === id)
+    this.users.splice(index, 1)
     },
-    removeItem(index) {
-      this.myList.splice(index, 1)
     }
 
 }

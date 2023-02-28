@@ -165,3 +165,27 @@
     border-color: #ff6961;
     box-shadow: 0 0 5px rgba(255, 105, 97, 0.5);
   }
+
+
+
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f274;
+    font-weight: bold;
+  }
+  
+  td:last-child {
+    text-align: center;
+  }

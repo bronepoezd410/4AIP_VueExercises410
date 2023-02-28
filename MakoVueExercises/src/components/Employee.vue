@@ -1,5 +1,7 @@
 <template>
 	<p>{{ id }} {{ name }} {{ salary }} {{ age }}</p>
+
+
 </template>
 
 

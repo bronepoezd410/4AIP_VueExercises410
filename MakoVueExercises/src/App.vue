@@ -1,7 +1,7 @@
 <template>
 
     <div class="withMargin">
-        <p>промежуточная ветвь </p>
+        <p>промежуточная ветвь! </p>
 
     </div>
 

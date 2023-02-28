@@ -12,11 +12,11 @@ export default {
 	}
 },
 methods: {
-    Name(name) {
-        console.log(name);
+    one: function (name) {
+      document.write(name)
     },
-    Salary(salary){
-        console.log(salary);
+    two: function (name, salary) {
+      document.write(name + '  ' + salary)
     }
   }
 }
@@ -26,7 +26,9 @@ methods: {
 
 
 <template>
-    <Rabotnik @show="Name" @show1="Salary"/>
+
+    <Rabotnik @show1="one" @show2="two"/>
+
 </template>
 
 

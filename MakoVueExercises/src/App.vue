@@ -1,15 +1,16 @@
 
 <template>
     <div class="withMargin"> 
-        <input v-model="message" @keyup.enter="submit"/>
-        <p> {{ actualmessage  }}</p>
+	<input v-model="newItem">
+	<button @click="addItem" >add to ending</button>
+	<button @click="addItemToBegin" >add to beginning</button>
 
-        <a href="#" @click.alt="show" > ссылка </a>
-        <p>{{ text }}</p>
+    <ul>
+		<li v-for="(item, index) in items" :key="index">
+			{{ item }}
+		</li>
+	</ul>
 
-
-        <a href="#" @click.left="displayText('left')" @click.right="displayText('right')" @click.middle="displayText('middle')">Click me!</a>
-        <p>{{ text1 }}</p>
 
 
     </div>
@@ -23,34 +24,22 @@ import { normalizeProps } from 'vue';
 export default {
   data() {
     return {
-        message: '',
-        actualmessage: '',
-        text: '',
-        text1: ''
+        newItem: '',
+		items: ['a', 'b', 'c', 'd', 'e'],
 
     }
   },
     methods: 
     {
-        submit: function(){
-            this.actualmessage = this.message
-
-        },
-        show: function(){
-            this.text = 'ALT key is pressed!'
-        },
-        displayText(button) {
-        if (button === 'left') {
-            this.text1 = 'left'} 
-            else if (button === 'right') {
-            this.text1 = 'right'} 
-            else if (button === 'middle') {
-            this.text1 = 'middle'
-        }
+	addItem: function() {
+		this.items.push(this.newItem);
+	},
+	addItemToBegin: function() {
+		this.items.unshift(this.newItem);
+	}
     }
 
     }
-}
 
 
 </script>

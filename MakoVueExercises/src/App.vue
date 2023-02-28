@@ -1,63 +1,49 @@
 
-
 <template>
-<Rabotnik v-for="user in users"
-		:id="user.id"
-		:name="user.name"
-		:surn="user.surn"
-		:key="user.id"
-    @change="change"
-/>
-</template>
-
+    <AddUsers @add="add" />
+  </template>
+  
+  
 
 
 <script>
-import Rabotnik from './components/Employee.vue'
+import AddUsers from './components/AddUsers.vue'
+import Employee from './components/Employee.vue'
+
 export default {
   components: {
-    Rabotnik
+    AddUsers, Employee
   },
   data() {
     return {
       users: [
         {
           id: 1,
-          name: 'Давид',
-          surn: 'Авагян'
+          name: 'name1',
+          surn: 'surn1'
         },
         {
           id: 2,
-          name: 'Данил',
-          surn: 'Ромашкан'
+          name: 'name2',
+          surn: 'surn2'
         },
         {
           id: 3,
-          name: 'Эдем',
-          surn: 'Османов'
+          name: 'name3',
+          surn: 'surn3'
         },
       ],
     }
   },
   methods: {
-    change(id, name, surn){
-      this.users = this.users.map((user) => {
-        if(user.id === id){
-          user.name = name;
-          user.surn = surn;
-        }
-        return user;
-      });
+    add(name, surn) {
+      let id = this.users.length + 1;
+      this.users.push({id, name, surn});
+      console.log(this.users)
     }
   }
 }
 </script>
-
-
-
-
-
-
 
 
 <style>

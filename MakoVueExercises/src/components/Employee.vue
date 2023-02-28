@@ -1,3 +1,11 @@
+
+<template>
+	<div class="withMargin">
+	  <button @click="$emit('show1')">One</button>
+	  <button @click="$emit('show2')">Two</button>
+	</div>
+  </template>
+
 <script>
 export default {
   props: {
@@ -8,21 +16,9 @@ export default {
     return {
     }
   },
-  methods: {
-    showApp1: function () {
-      this.$emit('show1', 'Давид Авагян');
-    },
-    showApp2: function () {
-      this.$emit('show2', 'Давид Авагян', '5$');
-    }
-  }
+  
 }
 </script>
-
-<template>
-	  <button @click="showApp1">Первое </button>
-	  <button @click="showApp2">Второе </button>
-</template>
 
 
 // <!-- props: {

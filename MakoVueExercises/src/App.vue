@@ -1,6 +1,17 @@
+
+
+
+
+<template>
+
+    <Rabotnik @show1="one" @show2="two"/>
+
+</template>
+
+
+
 <script>
 import Rabotnik from './components/Employee.vue'
-
 
 export default {
   components: {
@@ -12,24 +23,17 @@ export default {
 	}
 },
 methods: {
-    one: function (name) {
-      document.write(name)
+    one: function () {
+      document.write('Сообщение 1')
     },
-    two: function (name, salary) {
-      document.write(name + '  ' + salary)
+    two: function () {
+      document.write('Сообщение 2')
     }
-  }
+}
 }
 </script>
 
 
-
-
-<template>
-
-    <Rabotnik @show1="one" @show2="two"/>
-
-</template>
 
 
 

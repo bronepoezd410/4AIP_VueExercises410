@@ -10,11 +10,16 @@
 			{{ item }}
 		</li>
 	</ul>
-
-
-
     </div>
 
+
+    <div class="withMargin">
+        <ul>
+        <li v-for="(item1, index) in myList" :key="index" @click="removeItem(index)">
+            {{ item1 }}
+        </li>
+        </ul>
+    </div>
 
 </template>
 
@@ -26,6 +31,7 @@ export default {
     return {
         newItem: '',
 		items: ['a', 'b', 'c', 'd', 'e'],
+        myList: ['item1', 'item2', 'item3']
 
     }
   },
@@ -35,11 +41,13 @@ export default {
 		this.items.push(this.newItem);
 	},
 	addItemToBegin: function() {
-		this.items.unshift(this.newItem);
-	}
+		this.items.unshift(this.newItem);}
+    },
+    removeItem(index) {
+      this.myList.splice(index, 1)
     }
 
-    }
+}
 
 
 </script>

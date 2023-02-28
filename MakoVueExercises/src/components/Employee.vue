@@ -1,11 +1,12 @@
 <template>
-	<p>{{ name }} {{ salary }} {{ age }}</p>
+	<p>{{ id }} {{ name }} {{ salary }} {{ age }}</p>
 </template>
 
 
 <script>
 export default {
 	props: {
+		id: Number,
 		name: String,
 		salary: String,
 		age: Number,

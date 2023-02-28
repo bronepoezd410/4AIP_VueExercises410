@@ -1,24 +1,26 @@
-
-<template>
-	<div class="withMargin">
-	  <button @click="$emit('show1')">One</button>
-	  <button @click="$emit('show2')">Two</button>
-	</div>
-  </template>
-
 <script>
 export default {
   props: {
-    show1: Number,
-    show2: Number,
+    id: Number,
+    name: String,
+    surn: String,
   },
+  emits: ['remove'],
   data() {
     return {
     }
   },
-  
 }
 </script>
+
+<template>
+  <div class="block">
+    {{ name }}
+    {{ surn }}
+    <button class="btn" @click="$emit('remove', id)">remove</button>
+  </div>
+  
+</template>
 
 
 // <!-- props: {

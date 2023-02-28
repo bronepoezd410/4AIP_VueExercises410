@@ -1,16 +1,12 @@
-
 <template>
-<ul>
-
-	<li v-for="names in name">{{ names }}</li>
-</ul>
+	<p>{{ name }} {{ salary }} {{ age }}</p>
 </template>
 
 
 
 <script>
 export default {
-	props: ['name'],	
+    props: ['name', 'salary', 'age'],
     data() {
         return {
         }
